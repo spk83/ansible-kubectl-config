@@ -1,0 +1,27 @@
+---
+galaxy_info:
+  author: Vishal Shah
+  description: Configures kubectl to connect to your k8s cluster
+  company: BlackRock
+  license:
+    - MIT
+  min_ansible_version: 2.0
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Alpine
+      versions:
+        - all
+  galaxy_tags:
+    - kubectl
+    - k8s
+
+dependencies: []
+  
