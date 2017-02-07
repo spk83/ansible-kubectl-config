@@ -19,9 +19,12 @@ galaxy_info:
     - name: Alpine
       versions:
         - all
+
   galaxy_tags:
     - kubectl
     - k8s
 
-dependencies: []
-  
+dependencies:
+  - role: andrewrothstein.kubectl
+    version: v1.0.5
+    kubectl_install_dir: '{{kubectl_config_install_dir}}'

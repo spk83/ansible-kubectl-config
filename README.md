@@ -22,9 +22,9 @@ Example Playbook
 ----------------
 
 ```yml
-- hosts: servers
+- hosts: localhost
   roles:
-    - username.rolename
+    - spk83.kubectl-config
 ```
 
 License
