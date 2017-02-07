@@ -1,17 +1,15 @@
 ---
 kubectl_config_user: k8s
-kubectl_config_group: k8s
 kubectl_config_user_token: JKQ8n5stwH5UaTjfWNH4qli2bharF5wM
 
 kubectl_config_install_dir : /usr/local/bin
-kubectl_config_dir: ~/.kube
 
 # Following vars should be same as the one used to setup cluster
 # Reference role - andrewrothstein.kubernetes-cluster
 k8s_cluster_name: mykubecluster
 
 k8s_secured: True
-k8s_src_pki_dir: ~/pki-dir
+k8s_src_pki_dir: /pki-dir
 k8s_pki_key_suffix: '-key.pem'
 k8s_pki_cert_suffix: '.pem'
 

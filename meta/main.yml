@@ -26,5 +26,6 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.kubectl
-    version: v1.0.5
+    version: v1.0.7
     kubectl_install_dir: '{{kubectl_config_install_dir}}'
+    kubectl_privilege_escalate: False
