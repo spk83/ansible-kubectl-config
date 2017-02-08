@@ -17,3 +17,5 @@ k8s_master_group_name: kubernetes-master
   
 k8s_network_iface: eth0
 k8s_apiserver_secure_port: 6443
+
+#k8s_apiserver_secure_lb: https://lb.kube-api.xyz.com:6443
