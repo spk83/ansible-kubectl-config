@@ -2,20 +2,20 @@
 - name: create config directory
   become: yes
   become_user: '{{kubectl_config_user}}'
-  file: >-
-    path={{kubectl_config_dir}}
-    state=directory
-    mode=0755
+  file:
+    path: '{{kubectl_config_dir}}'
+    state: directory
+    mode: 0755
 
 - name: write config script
   become: yes
   become_user: '{{kubectl_config_user}}'
   with_items:
     - kubeconfig.sh
-  template: >-
-    src={{item}}.j2
-    dest={{kubectl_config_install_dir}}/{{item}}
-    mode=0755
+  template:
+    src: '{{item}}.j2'
+    dest: '{{kubectl_config_install_dir}}/{{item}}'
+    mode: 0755
     
 - name: write kubeconfig
   become: yes
@@ -23,3 +23,13 @@
   command: '{{kubectl_config_install_dir}}/kubeconfig.sh'
   args:
     creates: '{{kubectl_config_name}}'
+
+- name: set KUBECONFIG env variable
+  become: yes
+  become_user: '{{kubectl_config_user}}'
+  with_items:
+    - kubectl-config.sh
+  template:
+    src: '{{item}}.j2'
+    dest: '{{kubectl_config_profile_dir}}/{{item}}'
+    mode: 0755
