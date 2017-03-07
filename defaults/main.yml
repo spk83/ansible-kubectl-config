@@ -10,7 +10,6 @@ k8s_cluster_name: mykubecluster
 
 k8s_secured: True
 k8s_src_pki_dir: /pki-dir
-k8s_pki_key_suffix: '-key.pem'
 k8s_pki_cert_suffix: '.pem'
 
 k8s_master_group_name: kubernetes-master
